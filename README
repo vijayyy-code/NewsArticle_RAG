@@ -1,0 +1,84 @@
+# NewsArticle_RAG
+
+AI-powered News Article Retrieval-Augmented Generation (RAG) System using Python.
+
+---
+
+## Overview
+
+This project implements a **RAG pipeline** for news articles.  
+It leverages:
+
+- **Vector database** for storing embeddings  
+- **LLM integration** for generating summaries or answers  
+- **Chunking** and **embedding storage** for efficient retrieval  
+
+Designed for **research, experimentation, and AI demos**.
+
+---
+
+## Features
+
+- Load and process news articles  
+- Store embeddings in a vector database  
+- RAG-based querying for articles  
+- Modular architecture for easy experimentation  
+- Secure handling of API keys via `.env`
+
+---
+
+## Quick Start
+
+Clone the repository and install dependencies in one go:
+
+```bash
+git clone https://github.com/vijayyy-code/NewsArticle_RAG.git
+cd NewsArticle_RAG
+python -m venv venv && venv\Scripts\activate && pip install -r requirements.txt
+Note for Linux/Mac:
+Use source venv/bin/activate instead of venv\Scripts\activate.
+
+Set up your .env file in the root:
+
+env
+Copy code
+API_KEY=your_api_key_here
+.env is ignored in GitHub for security.
+
+Usage
+Run the RAG pipeline:
+
+bash
+Copy code
+python main.py
+Other modules:
+
+chunking.py → split articles into chunks
+
+embedding_store.py → manage embeddings
+
+llm_integration.py → interface with LLMs
+
+rag_pipeline.py → run RAG queries
+
+check.py / remove.py → utility scripts
+
+Folder Structure
+csharp
+Copy code
+newsrag/
+├── cache/               # temporary cache files (ignored)
+├── vector_db/           # vector database (ignored)
+├── venv/                # virtual environment (ignored)
+├── __pycache__/         # Python cache (ignored)
+├── app.py
+├── main.py
+├── chunking.py
+├── embedding_store.py
+├── llm_integration.py
+├── rag_pipeline.py
+├── remove.py
+├── check.py
+├── requirements.txt
+├── .env.example
+├── .gitignore
